@@ -1,0 +1,8 @@
+body{background-color:#50384E;color:#E8E8E8;text-align:center;font-family:"Segoe UI",Arial;font-size:16px;}
+h1{color:#F8F8F8;text-align:center;font-family:"Segoe UI",Arial;font-size:40px;font-style:italic;font-weight:bold;}
+h2{color:#F8F8F8;text-align:center;font-family:"Segoe UI",Arial;font-size:32px;font-style:italic;}
+a:link {color:#9EEDFF;text-decoration:none;}
+a:visited {color:#F5F56E;text-decoration:none;}
+a:hover {color:#4F7780;text-decoration:none;}
+a:active {color:#808039;text-decoration:none;}
+/*desaturated purple: #50384E, desaturated red: #503838*/

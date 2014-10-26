@@ -1,0 +1,2 @@
+Version
+207!Version 2.0.7 has been released!#Changes:#DSM options 3 menu now shows when on DSM controls.#Fixed a spelling error.#Added opacity on advanced spectator HUD.#Fixed mystery error ???
