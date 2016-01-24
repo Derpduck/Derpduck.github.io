@@ -1,0 +1,20 @@
+[b]RCON Explaination[/b]
+--What is RCON?
+RCON is a tool that allows players in your server to use some of the console commands available to the host. This lets players moderate your server and have some limited control over it, there are systems in place to make sure nothing happens that could possibly cause damages to you.
+
+--How do I use RCON on my server?
+First, you have to allow RCON to be used on the server, which can be done through the options menu. Alternatively, you can type 'rcon toggle' in the console in-game to toggle RCON on and off.
+There are 2 ways to enable specific players to use RCON:
+  1. RCON Password
+You can set the RCON password in the options menu. Players on your server that enter this password into the console with the correct command will be granted RCON access. You can add/change the password in the console by typing 'rcon password <your password here>'.
+  2. Manually granting RCON
+You can give a player RCON by typing 'rcon add <playerID/playerName>' in the console.
+
+--How do I remove a RCON from my server?
+Type 'rcon remove <playerID/playerName>' in the console. You can also kick the player from the server.
+
+--How do I gain RCON access on another server?
+If the server has RCON enabled, then you can type 'rcon login <password>' in the console to gain RCON access.
+
+
+Hopefully this will help to clear up any issues with using RCON, since I didn't explain it when I first released it.
