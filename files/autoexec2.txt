@@ -1,49 +1,32 @@
 //DERPDUCK'S L4D2 AUTOEXEC PART 2
-//AS OF 2016/02/10
-//
+//AS OF 2016/03/13
+//----------------
 //CROSSHAIR
-//WHITE
-alias cross_white "cl_crosshair_red 255;cl_crosshair_green 255;cl_crosshair_blue 255"
-//RED
-alias cross_red "cl_crosshair_red 255;cl_crosshair_green 0;cl_crosshair_blue 0"
-//GREEN
-alias cross_green "cl_crosshair_red 0;cl_crosshair_green 255;cl_crosshair_blue 0"
-//BLUE
-alias cross_blue "cl_crosshair_red 0;cl_crosshair_green 0;cl_crosshair_blue 255"
-//PINK
-alias cross_pink "cl_crosshair_red 255;cl_crosshair_green 0;cl_crosshair_blue 255"
-//ORANGE
-alias cross_orange "cl_crosshair_red 255;cl_crosshair_green 80;cl_crosshair_blue 0"
-//LIGHT ORANGE
-alias cross_lightorange "cl_crosshair_red 250;cl_crosshair_green 128;cl_crosshair_blue 50"
-//CRIMSON
-alias cross_crim "cl_crosshair_red 255;cl_crosshair_green 0;cl_crosshair_blue 65"
-//AQUA
-alias cross_aqua "cl_crosshair_red 0;cl_crosshair_green 255;cl_crosshair_blue 150"
-//PURPLE
-alias cross_purple "cl_crosshair_red 148; cl_crosshair_green 0; cl_crosshair_blue 211"
-//LIGHT PURPLE
-alias cross_lightpurple "cl_crosshair_red 168; cl_crosshair_green 43; cl_crosshair_blue 226"
-//DARK PURPLE
-alias cross_darkpurple "cl_crosshair_red 150;cl_crosshair_green 0;cl_crosshair_blue 150"
-//LILAC
-alias cross_lilac "cl_crosshair_red 150;cl_crosshair_green 0;cl_crosshair_blue 255"
-//BAD BLUE
-alias cross_badblue "cl_crosshair_red 100;cl_crosshair_green 50;cl_crosshair_blue 255"
-//LIGHT PINK
-alias cross_lightpink "cl_crosshair_red 218;cl_crosshair_green 112;cl_crosshair_blue 214"
-//YELLOW
-alias cross_yellow "cl_crosshair_red 250;cl_crosshair_green 250;cl_crosshair_blue 50"
-//CYAN
-alias cross_cyan "cl_crosshair_red 0; cl_crosshair_green 255; cl_crosshair_blue 255"
-//LAWN GREEN
-alias cross_lawngreen "cl_crosshair_red 124; cl_crosshair_green 252; cl_crosshair_blue 0"
+alias cross_white "cl_crosshair_red 255;cl_crosshair_green 255;cl_crosshair_blue 255"			//WHITE
+alias cross_red "cl_crosshair_red 255;cl_crosshair_green 0;cl_crosshair_blue 0"					//RED
+alias cross_green "cl_crosshair_red 0;cl_crosshair_green 255;cl_crosshair_blue 0"				//GREEN
+alias cross_blue "cl_crosshair_red 0;cl_crosshair_green 0;cl_crosshair_blue 255"				//BLUE
+alias cross_pink "cl_crosshair_red 255;cl_crosshair_green 0;cl_crosshair_blue 255"				//PINK
+alias cross_orange "cl_crosshair_red 255;cl_crosshair_green 80;cl_crosshair_blue 0"				//ORANGE
+alias cross_lightorange "cl_crosshair_red 250;cl_crosshair_green 128;cl_crosshair_blue 50"		//LIGHT ORANGE
+alias cross_crimson "cl_crosshair_red 255;cl_crosshair_green 0;cl_crosshair_blue 65"			//CRIMSON
+alias cross_aqua "cl_crosshair_red 0;cl_crosshair_green 255;cl_crosshair_blue 150"				//AQUA
+alias cross_purple "cl_crosshair_red 148; cl_crosshair_green 0; cl_crosshair_blue 211"			//PURPLE
+alias cross_lightpurple "cl_crosshair_red 168; cl_crosshair_green 43; cl_crosshair_blue 226"	//LIGHT PURPLE
+alias cross_darkpurple "cl_crosshair_red 150;cl_crosshair_green 0;cl_crosshair_blue 150"		//DARK PURPLE
+alias cross_lilac "cl_crosshair_red 150;cl_crosshair_green 0;cl_crosshair_blue 255"				//LILAC
+alias cross_badblue "cl_crosshair_red 100;cl_crosshair_green 50;cl_crosshair_blue 255"			//BAD BLUE
+alias cross_lightpink "cl_crosshair_red 218;cl_crosshair_green 112;cl_crosshair_blue 214"		//LIGHT PINK
+alias cross_yellow "cl_crosshair_red 250;cl_crosshair_green 250;cl_crosshair_blue 50"			//YELLOW
+alias cross_cyan "cl_crosshair_red 0; cl_crosshair_green 255; cl_crosshair_blue 255"			//CYAN
+alias cross_lawngreen "cl_crosshair_red 124; cl_crosshair_green 252; cl_crosshair_blue 0"		//LAWN GREEN
+
+//SET THE CROSSHAIR COLOUR
+cross_lightorange
 
 //JOYSTICK
-joystick 0 //DISABLE JOYSTICK, LEAVING THIS ON CAN STOP SPEED CLIMBING FROM WORKING
+joystick 0	//DISABLE JOYSTICK, ENABLED CAN STOP SPEED CLIMB FROM WORKING
 joy_advanced 0
-//splitscreen.cfg - MY CONFIG FOR XBOX CONTROLLER
-//STEAM CONTROLLER LOL, THANKS FOR BREAKING THE GAME
 sc_enable 0
 sc_enable2 0
 
@@ -52,10 +35,10 @@ voice_enable 1
 sv_voiceenable 1
 voice_forcemicrecord 1
 voice_modenable 1
-voice_scale 1 //INCREASE VOLUME
-voice_vox 0 //PUSH-TO-TALK OR OPEN MIC
-voice_threshold 2000 //OPEN MIC DETECTION THRESHOLD
-voice_loopback 0 //DON'T PLAY BACK OWN VOICE
+voice_scale 1
+voice_vox 0				//PUSH-TO-TALK OR OPEN MIC
+voice_threshold 2000	//OPEN MIC DETECTION THRESHOLD
+voice_loopback 0		//DON'T PLAY BACK OWN VOICE
 
 //MOTD, ATTEMPTS TO DISABLE THEM
 motd_enabled 0
@@ -79,41 +62,32 @@ alias botmvp "say [MVP] SI: Coach [BOT] (1343 dmg [30%], 5 kills [35%])"
 alias stoletank "say Medic! :  somebody hacked into tank i was tank and they just stole it"
 alias duckshit "say (Infected) [N.B.D] Tom Green :  duck ur shit go die in a hole with your crap infected mum"
 alias greyscreen "say robertjdoig :  im on grey screen"
+alias grey "say_team robertjdoig :  im on grey screen"
 alias competitive "say Fenrir :  you will win anyway so stop playing so competitivly"
 alias botcrown "say Rochelle draw-crowned a witch (1536 damage, 140 chip)."
 alias notfailcrown "say Derpduck draw-crowned a witch (997 damage, 996 chip)."
 alias instaselfclear "say Derpduck insta-cleared a teammate from Derpduck (charger) (0.00 seconds)."
 alias confogl "say BotPotot: confogl is versus for people that cant play infected"
+alias faceballs "say pentotalem sodu :  your face look like my balls"
+alias iwillhacknick "say XxxprogamerxxX :  nick i will hack you hope you like the sound of that!!"
+alias madwater "say Revolverol :  gotta drink some water, i am kinda mad"
+alias headshotinair "say (Infected) Javivi :  lol headshot in air"
+alias saltina "say GRmama: saltina the type of girl to eat alphabet soup and choke on the D"
 
 //SPEEDRUNNING BINDS
 bind E "callvote ChangeDifficulty Easy"
-bind R "callvote ChangeDifficulty Impossible" //EXPERT
-//bind "F7" "callvote ChangeMission L4D2C1" //DEAD CENTER
-//bind "F8" "callvote ChangeMission L4D2C2" //DARK CARNIVAL
-//bind "F9" "callvote ChangeMission L4D2C3" //SWAMP FEVER
-//bind "F10" "callvote ChangeMission L4D2C4" //HARD RAIN
-//bind "F11" "callvote ChangeMission L4D2C5" //THE PARISH
-//bind F12 "callvote RestartGame" //2.0.0.8, SPEEDRUNNING
-//bind "F7" "changelevel c1m1_hotel" //DEAD CENTER
-//bind "F8" "changelevel c2m1_highway" //DARK CARNIVAL
-//bind "F9" "changelevel c3m1_plankcountry" //SWAMP FEVER
-//bind "F10" "changelevel c4m1_milltown_a" //HARD RAIN
-//bind "F11" "changelevel c5m1_waterfront" //THE PARISH
-
-//GLOWS
-//WITCH GLOWS, DON'T WORK, BUT KEEPING THEM ANYWAY
-//ANGRY - RED
-cl_witch_glow_angry_r 1
-cl_witch_glow_angry_b 0
-cl_witch_glow_angry_g 0
-
-//IDLE - GREEN/BLUE
-cl_witch_glow_idle_r 0
-cl_witch_glow_idle_g 1
-cl_witch_glow_idle_b 0.5
-
-//SEE WITCH GLOW FROM FURTHER AWAY
-cl_witch_glow_range 3000
+bind R "callvote ChangeDifficulty Impossible"	//EXPERT
+//bind "F7" "callvote ChangeMission L4D2C1"		//DEAD CENTER
+//bind "F8" "callvote ChangeMission L4D2C2"		//DARK CARNIVAL
+//bind "F9" "callvote ChangeMission L4D2C3"		//SWAMP FEVER
+//bind "F10" "callvote ChangeMission L4D2C4"	//HARD RAIN
+//bind "F11" "callvote ChangeMission L4D2C5"	//THE PARISH
+//bind F12 "callvote RestartGame"				//2.0.0.8, SPEEDRUNNING
+//bind "F7" "changelevel c1m1_hotel"			//DEAD CENTER
+//bind "F8" "changelevel c2m1_highway"			//DARK CARNIVAL
+//bind "F9" "changelevel c3m1_plankcountry"		//SWAMP FEVER
+//bind "F10" "changelevel c4m1_milltown_a"		//HARD RAIN
+//bind "F11" "changelevel c5m1_waterfront"		//THE PARISH
 
 // MY (WORKING) SPRAYS
 alias spray_licky "cl_logofile materials/vgui/logos/custom/licky.vtf"
@@ -151,35 +125,6 @@ alias spray_teamrocket "cl_logofile materials/vgui/logos/custom/teamrocket.vtf"
 alias spray_tongue "cl_logofile materials/vgui/logos/custom/tongue.vtf"
 alias spray_tsex "cl_logofile materials/vgui/logos/custom/tsex.vtf"
 alias spray_woopwoop "cl_logofile materials/vgui/logos/custom/woopwoop.vtf"
-alias spray_havetokeepmove "cl_logofile materials/vgui/logos/custom/havetokeepmovep.vtf"
-
-//DON'T WORK/BAD SPRAYS
-//alias spray_911 "cl_logofile materials/vgui/logos/custom/911.vtf"
-//alias spray_bachelor "cl_logofile materials/vgui/logos/custom/bachelor.vtf"
-//alias spray_david_cameron "cl_logofile materials/vgui/logos/custom/david_cameron.vtf"
-//alias spray_barney "cl_logofile materials/vgui/logos/custom/barney.vtf"
-//alias spray_brains "cl_logofile materials/vgui/logos/custom/brains.vtf"
-//alias spray_climbing "cl_logofile materials/vgui/logos/custom/climbing.vtf"
-//alias spray_gaben3 "cl_logofile materials/vgui/logos/custom/gaben3.vtf"
-//alias spray_kissinghomer "cl_logofile materials/vgui/logos/custom/kissinghomer.vtf"
-//alias spray_meninblack "cl_logofile materials/vgui/logos/custom/meninblack.vtf"
-//alias spray_millhouse2 "cl_logofile materials/vgui/logos/custom/millhouse2.vtf"
-//alias spray_moeskeet "cl_logofile materials/vgui/logos/custom/moeskeet.vtf"
-//alias spray_opponent "cl_logofile materials/vgui/logos/custom/opponent.vtf"
-//alias spray_pubversus "cl_logofile materials/vgui/logos/custom/pubversus.vtf"
-//alias spray_rachel "cl_logofile materials/vgui/logos/custom/rachel.vtf"
-//alias spray_sculpt "cl_logofile materials/vgui/logos/custom/sculpt.vtf"
-//alias spray_spider "cl_logofile materials/vgui/logos/custom/spider.vtf"
-//alias spray_steelworks "cl_logofile materials/vgui/logos/custom/steelworks.vtf"
-//alias spray_train "cl_logofile materials/vgui/logos/custom/train.vtf"
-//alias spray_trap "cl_logofile materials/vgui/logos/custom/trap.vtf"
-//alias spray_uncleben "cl_logofile materials/vgui/logos/custom/uncleben.vtf"
-
-//OUTPUT SOME STUFF/KEEP FOR LATER USE
-net_status //LISTEN SERVER/CONNECTION STATUS (?)
-net_steamcnx_status //STEAM CONNECTION STATUS
-net_showudp 0 //1=SHOW PACKETS
-net_showudp_remoteonly 0
-version //GAME VERSION
+//alias spray_havetokeepmove "cl_logofile materials/vgui/logos/custom/havetokeepmovep.vtf"
 
 echo "AUTOEXEC 2 SUCCESSFULLY LOADED"
