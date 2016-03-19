@@ -1,0 +1,24 @@
+--Should I speedrun this game?
+    No.
+
+--Why do you speedrun this game?
+    I don't know.
+
+--What version do you speedrun on?
+    This depends on what maps / categories I'm running.
+    For any of the original 5 campaigns I will be running on 2.0.0.8, which is the oldest version of the game I can find.
+    Co-op runs will probably be on 2.0.0.8 or 2.0.2.7.
+    Any other runs should be on the current steam version.
+
+--Why do you sometimes reset twice in a row?
+    When loading a level for the first time the bots will be able to move instantly, the next time the level is loaded the bots will stay in place for a while, making them easier to shoot.
+
+--Why do you play on easy difficulty?
+    It's faster, this is a speedrun. The difficulty is changed to expert to kill bots, or to die quickly in co-op runs.
+
+--Why do you kill the bots?
+    Bots are slow. I would have to wait for them to get to the saferoom to finish the level.
+    Yes, I know you can kick the bots via console, but I do not do this as I disagree with doing it and it is against the rules I run on.
+
+--Why aren't you doing this thing?
+    Either it doesn't save any time, or it's something I don't know about. Generally it's the former. :^)
