@@ -1,5 +1,6 @@
 //DERPDUCK'S L4D2 AUTOEXEC
-//AS OF 2016/03/26
+//AS OF 2016/04/06
+//CHANGED FREQUENTLY
 //----------------
 //LAUNCH OPTIONS
 //-lv -novid -nojoy -noaafonts -width 1920 -height 1080 -windowed -noborder +mat_motion_blur_percent_of_screen_max 0 -dxlevel 80 -threads 4 +hostport 27005
@@ -16,9 +17,10 @@
 //MULTICORE RENDER:	ENABLED
 //PAGED POOL MEM:	HIGH
 
-alias 1000dpi "sensitivity 3.2;echo 1000 DPI, 4 SENSITIVITY"	//@ 1000 DPI
-alias 1d 1000dpi
-1d
+//@ 1000 DPI
+alias sens3_2 "sensitivity 3.2;echo 3.2 SENSITIVITY"
+alias sens2_5 "sensitivity 2.5;echo 2.5 SENSITIVITY"
+sens2_5
 
 //MISC. ALIASES
 alias srv "status;ping;sm version;sm plugins list" 							//CHECK SERVER LOCATION/NAME, PINGS, IF SOURCEMOD INSTALLED, SOURCEMOD PLUGINS
@@ -41,13 +43,14 @@ alias rup "say_team /ready"
 alias unrup "say_team /unready"
 alias spec "say_team /spectate"
 alias pause_bind "say_team /pause"
-alias spechud "say_team /spechud"
-alias cblind "cl_colorblind 1"
-alias cblind_off "cl_colorblind 0"
+alias shud "say_team /spechud"
 alias mvp_bind "say_team /mvp"
-alias eq_bonus "say_team /bonus full"
+alias eqbonus "say_team /bonus full"
 alias bonesaw "say_team /bonesaw 59"
 alias newpub "100_pubs;cl_glow_survivor_health_include_buffer 0"
+alias EasyVB "callvote ChangeDifficulty Easy"
+alias ExpertVB "callvote ChangeDifficulty Impossible"
+alias votebind "bind E EasyVB;bind R ExpertVB"
 
 //VIDEO RESOLUTION
 alias windowed "mat_setvideomode 1920 1080 1;cl_crosshair_thickness 3"
@@ -87,15 +90,6 @@ net_graphsolid 1			//SOLID INTERPOLATION GRAPH
 net_scale 35				//SIZE OF THE PACKET DISPLAY/BREAKDOWN AT THE TOP OF NET GRAPH, BIGGER VALUE=SMALLER DISPLAY, UNITS BYTES PER PIXEL
 lag1						//TURN ON BASIC NET GRAPH
 
-//CROSSHAIR
-//SET THE CROSSHAIR
-//COLOUR SET IN AUTOEXEC 2
-cl_crosshair_alpha 140		//TRANSPARENCY
-cl_colorblind 0				//1=WHITE CROSSHAIR WITH BLACK OUTLINE, IGNORES COLOUR SETTINGS
-cl_crosshair_dynamic 0		//STATIC CROSSHAIR
-cl_crosshair_thickness 3	//VALUES: 1-5, INTEGERS ONLY
-crosshair 1					//DRAW CROSSHAIR
-
 //MOUSE OPTIONS
 //SENSITIVITY AT TOP OF AUTOEXEC
 m_rawinput 1	//NO MOUSE ACCELERATION, MOUSE SPEED NOT BASED ON GAME FPS
@@ -116,8 +110,12 @@ m_side 0.8
 m_yaw 0.022
 
 //SOUND
-volume 0.15
-snd_musicvolume 0.15
+alias MASTER_VOLUME "volume 0.15"
+alias MASTER_VOLUME_OFF "volume 0.03"
+MASTER_VOLUME
+alias MUSIC_VOLUME "snd_musicvolume 0.15"
+alias MUSIC_VOLUME_FULL "snd_musicvolume 1"
+MUSIC_VOLUME
 dsp_enhance_stereo 0
 dsp_slow_cpu 0
 dsp_volume 0
@@ -260,7 +258,6 @@ bind = "say_team KILL COMMONS"
 bind F6 jpeg
 
 //PROMOD BINDS
-alias listbinds "echo F9 !pause;echo KP_5 !spectate;echo B !spechud" //LIST BINDS I FORGET
 bind F3 rup
 bind F4 unrup
 bind F9 pause_bind
@@ -268,7 +265,7 @@ bind Z tank
 bind X current
 bind C healthbind
 //bind KP_PGDN spechud_bind
-bind N mvp_bind
+//bind N mvp_bind
 bind KP_5 spec
 
 //TOGGLE CROUCH
@@ -279,12 +276,16 @@ bind MOUSE3 duck
 bind Q duck
 
 //TOGGLE MUSIC VOLUME, MAINLY TO HEAR TANK IN PUBS
-alias lmusic "snd_musicvolume 1"
-alias qmusic "snd_musicvolume 0.15"
 alias music_v "musicON"
-alias musicON "lmusic; alias music_v musicOFF;echo MUSIC_ON"
-alias musicOFF "qmusic; alias music_v musicON;echo MUSIC_OFF"
+alias musicON "MUSIC_VOLUME_FULL; alias music_v musicOFF;echo MUSIC_ON"
+alias musicOFF "MUSIC_VOLUME; alias music_v musicON;echo MUSIC_OFF"
 bind HOME music_v
+
+//TOGGLE MASTER VOLUME BECAUSE HELICOPTERS
+alias soundvol "soundvolON"
+alias soundvolON "MASTER_VOLUME_OFF; alias soundvol soundvolOFF;echo VOLUME_ON"
+alias soundvolOFF "MASTER_VOLUME; alias soundvol soundvolON;echo VOLUME_OFF"
+bind PGUP soundvol
 
 //TOGGLE FOV
 alias 0_fov "cl_viewmodelfovsurvivor 180"	//NO FOV
@@ -300,12 +301,12 @@ bind , fov_toggle
 
 //ALTERNATE FOV TOGGLE
 alias 51_fov "cl_viewmodelfovsurvivor 51" //DEFAULT
-alias 30_fov "cl_viewmodelfovsurvivor 30"
+alias 189_fov "cl_viewmodelfovsurvivor 189"
 alias 60_fov "cl_viewmodelfovsurvivor 60"
 alias fov_toggle2 fov60
-alias fov30 "30_fov;alias fov_toggle2 fov51;echo 30_FOV"
+alias fov189 "189_fov;alias fov_toggle2 fov51;echo 189_FOV"
 alias fov51 "51_fov;alias fov_toggle2 fov60;echo 51_FOV"
-alias fov60 "60_fov;alias fov_toggle2 fov30;echo 60_FOV"
+alias fov60 "60_fov;alias fov_toggle2 fov189;echo 60_FOV"
 bind K fov_toggle2 
 
 //TOGGLE BETWEEN +SPEED AND +VOICERECORD

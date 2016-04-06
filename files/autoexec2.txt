@@ -1,5 +1,6 @@
 //DERPDUCK'S L4D2 AUTOEXEC PART 2
-//AS OF 2016/03/26
+//AS OF 2016/04/06
+//CHANGED FREQUENTLY
 //----------------
 //CROSSHAIR
 alias cross_white "cl_crosshair_red 255;cl_crosshair_green 255;cl_crosshair_blue 255"			//WHITE
@@ -21,8 +22,13 @@ alias cross_yellow "cl_crosshair_red 250;cl_crosshair_green 250;cl_crosshair_blu
 alias cross_cyan "cl_crosshair_red 0; cl_crosshair_green 255; cl_crosshair_blue 255"			//CYAN
 alias cross_lawngreen "cl_crosshair_red 124; cl_crosshair_green 252; cl_crosshair_blue 0"		//LAWN GREEN
 
-//SET THE CROSSHAIR COLOUR
-cross_pink
+//CROSSHAIR
+cl_crosshair_alpha 160		//TRANSPARENCY
+cl_colorblind 0				//1=WHITE CROSSHAIR WITH BLACK OUTLINE, IGNORES COLOUR SETTINGS
+cl_crosshair_dynamic 0		//STATIC CROSSHAIR
+cl_crosshair_thickness 2	//VALUES: 1-5, INTEGERS ONLY
+crosshair 1					//DRAW CROSSHAIR
+cross_green					//SET THE CROSSHAIR COLOUR
 
 //GLOWS
 //SURVIVOR SIDE
@@ -148,7 +154,6 @@ alias botmvp "say [MVP] SI: Coach [BOT] (1343 dmg [30%], 5 kills [35%])"
 alias stoletank "say Medic! :  somebody hacked into tank i was tank and they just stole it"
 alias duckshit "say (Infected) [N.B.D] Tom Green :  duck ur shit go die in a hole with your crap infected mum"
 alias greyscreen "say robertjdoig :  im on grey screen"
-alias grey "say_team robertjdoig :  im on grey screen"
 alias competitive "say Fenrir :  you will win anyway so stop playing so competitivly"
 alias botcrown "say Rochelle draw-crowned a witch (1536 damage, 140 chip)."
 alias instaselfclear "say Derpduck insta-cleared a teammate from Derpduck (charger) (0.00 seconds)."
@@ -161,10 +166,14 @@ alias cucnt "say Its Billy Bellend! :   so i do you thcik cucnt"
 alias aintrush "say Its Billy Bellend! :   and that aint rush you thcikc utn"
 alias noderp "say Its Billy Bellend! :   and fuckin NO ONE says derp any mor"
 alias cuntisbetter "say YAN :  voice enable is ok but fuck off you cunt is better"
+alias mentalserver "say <Brilliancegoat> Why does Left 4 Dead 2 quickplay involve mantally challenged servers?"
+alias botskeet "say Coach skeeted Derpduck."
+alias myff "say [LVP] FF: Derpduck (295 dmg [82%])"
+alias derp1kff "say HAHA# :  this derp retard has 1k ff"
 
 //SPEEDRUNNING BINDS
-bind E "callvote ChangeDifficulty Easy"
-bind R "callvote ChangeDifficulty Impossible"	//EXPERT
+//bind E "callvote ChangeDifficulty Easy"
+//bind R "callvote ChangeDifficulty Impossible"	//EXPERT
 //bind "F7" "callvote ChangeMission L4D2C1"		//DEAD CENTER
 //bind "F8" "callvote ChangeMission L4D2C2"		//DARK CARNIVAL
 //bind "F9" "callvote ChangeMission L4D2C3"		//SWAMP FEVER
@@ -191,41 +200,5 @@ bind R "callvote ChangeDifficulty Impossible"	//EXPERT
 //alias mwheelON "mwheel_inf; alias mwheelbinds mwheelOFF;echo MWHEEL_ATTACK_ON"
 //alias mwheelOFF "mwheel_surv; alias mwheelbinds mwheelON;echo MWHEEL_ATTACK_OFF"
 //bind L mwheelbinds
-
-// MY (WORKING) SPRAYS
-//alias spray_licky "cl_logofile materials/vgui/logos/custom/licky.vtf"
-//alias spray_gaben_knife "cl_logofile materials/vgui/logos/custom/gaben_knife.vtf"
-//alias spray_millhouse "cl_logofile materials/vgui/logos/custom/millhouse.vtf"
-//alias spray_l4dpubs "cl_logofile materials/vgui/logos/custom/l4dpubs.vtf"
-//alias spray_50shadesofsquid "cl_logofile materials/vgui/logos/custom/50shadesofsquid.vtf"
-//alias spray_atheists "cl_logofile materials/vgui/logos/custom/atheists.vtf"
-//alias spray_bartfuture "cl_logofile materials/vgui/logos/custom/bartfuture.vtf"
-//alias spray_bigbuttskinner "cl_logofile materials/vgui/logos/custom/bigbuttskinner.vtf"
-//alias spray_buff "cl_logofile materials/vgui/logos/custom/buff.vtf"
-//alias spray_byegod "cl_logofile materials/vgui/logos/custom/byegod.vtf"
-//alias spray_dabooty "cl_logofile materials/vgui/logos/custom/dabooty.vtf"
-//alias spray_gaben "cl_logofile materials/vgui/logos/custom/gaben.vtf"
-//alias spray_gaben2 "cl_logofile materials/vgui/logos/custom/gaben2.vtf"
-//alias spray_gaswho "cl_logofile materials/vgui/logos/custom/gaswho.vtf"
-//alias spray_hoover "cl_logofile materials/vgui/logos/custom/hoover.vtf"
-//alias spray_hotdog "cl_logofile materials/vgui/logos/custom/hotdog.vtf"
-//alias spray_icecream "cl_logofile materials/vgui/logos/custom/icecream.vtf"
-//alias spray_kinghomer "cl_logofile materials/vgui/logos/custom/kinghomer.vtf"
-//alias spray_kurt "cl_logofile materials/vgui/logos/custom/kurt.vtf"
-//alias spray_maryjane "cl_logofile materials/vgui/logos/custom/maryjane.vtf"
-//alias spray_nakedgun "cl_logofile materials/vgui/logos/custom/nakedgun.vtf"
-//alias spray_nobeerandnotv "cl_logofile materials/vgui/logos/custom/nobeerandnotv.vtf"
-//alias spray_photoshop "cl_logofile materials/vgui/logos/custom/photoshop.vtf"
-//alias spray_pika "cl_logofile materials/vgui/logos/custom/pika.vtf"
-//alias spray_samjpg "cl_logofile materials/vgui/logos/custom/samjpg.vtf"
-//alias spray_stupidsexyflanders "cl_logofile materials/vgui/logos/custom/stupidsexyflanders.vtf"
-//alias spray_spongebeb "cl_logofile materials/vgui/logos/custom/spongebeb.vtf"
-//alias spray_squidward "cl_logofile materials/vgui/logos/custom/squidward.vtf"
-//alias spray_squidwardfacial "cl_logofile materials/vgui/logos/custom/squidwardfacial.vtf"
-//alias spray_squidwardvacuum "cl_logofile materials/vgui/logos/custom/squidwardvacuum.vtf"
-//alias spray_teamrocket "cl_logofile materials/vgui/logos/custom/teamrocket.vtf"
-//alias spray_tongue "cl_logofile materials/vgui/logos/custom/tongue.vtf"
-//alias spray_tsex "cl_logofile materials/vgui/logos/custom/tsex.vtf"
-//alias spray_woopwoop "cl_logofile materials/vgui/logos/custom/woopwoop.vtf"
 
 echo "AUTOEXEC 2 SUCCESSFULLY LOADED"
