@@ -3,7 +3,7 @@
 //Changed frequently
 //----------------
 //Launch Options//
-//-lv -novid -nojoy -noaafonts +mat_motion_blur_percent_of_screen_max 0 -dxlevel 80 -threads 4
+//-lv -novid -nojoy -noaafonts -noborder +mat_motion_blur_percent_of_screen_max 0 -dxlevel 80 -threads 4 -freq 60
 
 //Video Settings//
 //Anti-Aliasing:	NONE
@@ -16,7 +16,7 @@
 //Paged Pool Mem:	HIGH
 
 //@ 1000 DPI
-sensitivity 1.7
+sensitivity 1.8
 
 //Misc. Aliases//
 alias rcd			"record DEMORECORDINGFIX;stop"	//Fast demo record/stop to fix graphical bugs
@@ -35,7 +35,7 @@ alias spec			"say_team /spectate"
 alias pause_bind	"say_team /pause"
 alias shud			"say_team /spechud"
 alias mvp_bind		"say_team /mvp"
-alias bonusfull		"say_team /health full"	//For use in EQ-based configs, shows a compelete breakdown of the bonus (points and % per each section)
+alias bonusfull		"say_team /health full"	//For use in EQ-based configs, shows a compelete breakdown of the bonus (points and % per each section), compatible with ProMod (no extra information given)
 alias bonesaw		"say_team /bonesaw 59"	//RUP+Trophy
 alias EasyVB		"callvote ChangeDifficulty Easy"
 alias ExpertVB		"callvote ChangeDifficulty Impossible"
@@ -50,14 +50,22 @@ alias 189_fov		"cl_viewmodelfovsurvivor 189"	//Upside down, far
 alias 60_fov		"cl_viewmodelfovsurvivor 60"	//Slightly above default
 alias 30_fov		"cl_viewmodelfovsurvivor 30"	//Close
 alias incapfr		"echo 91.121.110.150:27015"		//IP of Panda's server
+alias "+sb"			"+showscores;net_graph 4"		//Show scoreboard and detailed net graph at same time
+alias "-sb"			"-showscores;net_graph 1"		//On release
+alias "+glowuse"	"+use;cl_glow_survivor_health_include_buffer 1"	//Use key + change glow setting
+alias "-glowuse"	"-use;cl_glow_survivor_health_include_buffer 0"	//On release
+alias "+glowattack"	"+attack;cl_glow_survivor_health_include_buffer 1"	//Attack + change glow setting
+alias "-glowattack"	"-attack;cl_glow_survivor_health_include_buffer 0"	//On release
 
 //Video Resolution//
-alias windowed "mat_setvideomode 1920 1080 1"
-alias fullscreen "mat_setvideomode 1920 1080 0"
-alias 720w "mat_setvideomode 1280 720 1"
-alias 720f "mat_setvideomode 1280 720 0"
+alias 1080w		"mat_setvideomode 1920 1080 1"
+alias 1080f		"mat_setvideomode 1920 1080 0"
+alias 720w		"mat_setvideomode 1280 720 1"
+alias 720f		"mat_setvideomode 1280 720 0"
+alias windowed	"echo 1080w"
+alias 720p		"echo 720w"
 720f
-//windowed
+//1080w
 
 //Monitor Gamma//
 //Fullscreen only, difference cannot be seen in screenshots (or video?), only on monitor
@@ -72,28 +80,26 @@ alias g220 "mat_monitorgamma 2.2;mat_monitorgamma_tv_enabled 0"	//Same as window
 g181
 
 //Interp//
-alias "0_lerp"		"cl_interp 0.0000;cl_interp_ratio -1;echo 0ms INTERP"		//0ms Interp, 
-alias "8_lerp"		"cl_interp 0.0080;cl_interp_ratio -1;echo 8ms INTERP"		//8ms Interp (128 tick)
+alias "0_lerp"		"cl_interp 0.0000;cl_interp_ratio -1;echo 0ms INTERP"		//0ms Interp
+alias "5_lerp"		"cl_interp 0.0056;cl_interp_ratio -1;echo 5.5ms INTERP"		//5.5ms Interp (180 tick), should be 5.5555...ms
+alias "8_lerp"		"cl_interp 0.0080;cl_interp_ratio -1;echo 8ms INTERP"		//8ms Interp (128 tick), should be 7.8125ms
 alias "10_lerp"		"cl_interp 0.0100;cl_interp_ratio -1;echo 10ms INTERP"		//10ms Interp
 alias "16_lerp"		"cl_interp 0.0167;cl_interp_ratio -1;echo 16.7ms INTERP"	//16.7ms Interp
 alias "33_lerp"		"cl_interp 0.0333;cl_interp_ratio -1;echo 33.3ms INTERP"	//33.3ms Interp
 alias "66_lerp"		"cl_interp 0.0667;cl_interp_ratio -1;echo 66.7ms INTERP"	//66.7ms Interp
-alias "100_lerp"	"cl_interp 0.1000;cl_interp_ratio -1;echo 100ms INTERP"		//100ms Interp, default
+alias "100_lerp"	"cl_interp 0.1000;cl_interp_ratio -1;echo 100ms INTERP"		//100ms Interp
 10_lerp
 
 //Rates//
 alias echo_rates	"rate;cl_cmdrate;cl_updaterate"										//Print current rates
-alias "128_rate"	"rate 128000;cl_cmdrate 128;cl_updaterate 128;echo_rates;8_lerp"	//128 Tick
+alias "180_rate"	"rate 100000;cl_cmdrate 100;cl_updaterate 180;echo_rates;5_lerp"	//180 Tick
+alias "128_rate"	"rate 100000;cl_cmdrate 100;cl_updaterate 128;echo_rates;8_lerp"	//128 Tick
 alias "100_rate"	"rate 100000;cl_cmdrate 100;cl_updaterate 100;echo_rates;10_lerp"	//100 Tick
 alias "60_rate"		"rate 60000;cl_cmdrate 60;cl_updaterate 60;echo_rates;16_lerp"		//60 Tick
-alias "30_rate"		"rate 30000;cl_cmdrate 30;cl_updaterate 30;echo_rates;33_lerp"		//30 Tick, default
+alias "30_rate"		"rate 30000;cl_cmdrate 30;cl_updaterate 30;echo_rates;33_lerp"		//30 Tick
 100_rate
 
 //Net Graph//
-//Show scoreboard and detailed net graph at same time
-alias "+sb" "+showscores; net_graph 4"
-alias "-sb" "-showscores; net_graph 1"
-
 net_graphproportionalfont 0	//Small font
 net_graphpos 320			//Doesn't cover any huds, values 0-2 are pre-defined positions, anything over is an exactly defined position
 net_graphheight 5			//Height of the graph, and distance between main part and packet loss part, affects size of packet loss display
@@ -124,11 +130,11 @@ m_side 0.8
 m_yaw 0.022
 
 //Sound//
-alias MASTER_VOLUME "volume 0.15"
-alias MASTER_VOLUME_OFF "volume 0.03"
+alias MASTER_VOLUME		"volume 0.15;echo |_____VOLUME_ON______|"
+alias MASTER_VOLUME_OFF	"volume 0.03;echo |_____VOLUME_OFF_____|"
 MASTER_VOLUME
-alias MUSIC_VOLUME "snd_musicvolume 0.15"
-alias MUSIC_VOLUME_FULL "snd_musicvolume 0.7"
+alias MUSIC_VOLUME		"snd_musicvolume 0.00;echo |_____MUSIC_OFF_____|"
+alias MUSIC_VOLUME_FULL	"snd_musicvolume 0.70;echo |_____MUSIC_ON______|"
 MUSIC_VOLUME
 dsp_enhance_stereo 0
 dsp_slow_cpu 0
@@ -166,7 +172,7 @@ net_maxroutable 1280			//Optimal rates
 net_public_adr 82.43.58.192		//Set IP for local server
 
 //Graphical//
-mat_queue_mode 2				//Multicore rendering
+mat_queue_mode 2				//Multicore rendering, 0=disabled, 2=enabled, -1=auto. Adds input lag, but gives higher consistent FPS
 mat_grain_scale_override 0		//No film grain
 mat_bloom_scalefactor_scalar 0	//Bloom, default=0.5
 r_dynamic 0						//Dynamic shadows, doesn't seem to do anything in L4D2
@@ -177,7 +183,7 @@ r_eyeshift_y 0
 r_eyeshift_x 0
 r_PhysPropStaticLighting 0
 cl_ragdoll_limit 0				//Remove ragdolls
-cl_perf_wizard_enable 0			//"Enables a performance-tuning wizard" - In-Game description
+cl_perf_wizard_enable 0			//"Enables a performance-tuning wizard"
 cl_detail_max_sway 0
 cl_detail_avoid_recover_speed 0
 cl_detail_avoid_force 0
@@ -187,7 +193,7 @@ budget_show_history 0
 //Visual//
 cam_ideallag 0
 c_thirdpersonshoulder 0			//Disble thirdperson
-c_thirdpersonshoulderoffset 0	//Set proper zoom distance
+c_thirdpersonshoulderoffset 0
 c_thirdpersonshoulderheight 0
 cl_chat_wipehistory 0
 muzzleflash_light 0				//Doesn't seem to do anything
@@ -203,7 +209,7 @@ ui_public_lobby_filter_difficulty2 ""
 //Key Binds//
 unbindall //Remove old binds
 
-//Null-cancelling movement script, left handed version
+//Null-cancelling movement script, left handed version//
 bind UPARROW +mfwd
 bind DOWNARROW +mback
 bind LEFTARROW +mleft
@@ -227,15 +233,16 @@ alias none ""
 bind MOUSE1 "+attack;dsp_volume 0"
 bind MOUSE2 +attack2
 bind RCTRL +jump
-bind ENTER +use
+bind ENTER +glowuse
 bind / +reload
 bind KP_INS +duck
 bind PGDN +zoom
 bind KP_END +zoom
 bind MWHEELUP invprev
 bind MWHEELDOWN invnext
-bind DEL slot1 				//Primary weapon
-bind END slot2				//Secondary weapon
+bind DEL slot1		//Primary weapon
+bind END slot2		//Secondary weapon
+bind SPACE slot5	//Pills
 bind 0 slot10
 bind 1 slot1
 bind 2 slot2
@@ -247,21 +254,21 @@ bind 7 slot7
 bind 8 slot8
 bind 9 slot9
 bind ESCAPE cancelselect
-bind M chooseteam
-bind H motd
+bind F5 chooseteam
+bind H motd					//Has issues when bound to any other key?
 bind Y messagemode			//Global chat
 bind U messagemode2			//Team chat
-bind RSHIFT +speed //+voicerecord	//Voice chat
+bind RSHIFT +speed			//Voice chat
 bind A "+mouse_menu Orders"	//Commands radial menu
 bind S "+mouse_menu QA"		//Laughing radial menu
 bind F1 "Vote Yes"
 bind F2 "Vote No"
 bind ` toggleconsole
 bind TAB +showscores
-bind SHIFT +sb				//Scoreboard and net graph
-bind INS "impulse 100"		//Flashlight
-bind F "impulse 201"		//Spray
-bind F12 "status;disconnect" //Print IP before disconnecting
+bind SHIFT +sb					//Scoreboard and net graph
+bind INS "impulse 100"			//Flashlight
+bind F "impulse 201"			//Spray
+bind F12 "status;disconnect"	//Print IP before disconnecting
 bind ] "say_team GO GO GO"
 bind [ "say_team BACK BACK BACK"
 bind = "say_team KILL COMMONS"
@@ -280,11 +287,11 @@ bind W "sm_warpto 2"	//Rochelle
 bind E "sm_warpto 3"	//Coach
 bind R "sm_warpto 4"	//Ellis
 
-//View-mode FOV//
+//View-model FOV//
 90_fov
 
 //Single FOV Binds
-bind P 90_fov	//Quick reset
+bind P 90_fov
 bind O 0_fov
 bind I 60_fov
 
@@ -299,28 +306,28 @@ bind , FOV_TOGGLE
 //Toggle Some Functions//
 //Toggle crouch
 alias duck		"duckON"
-alias duckON	"+duck; alias duck duckOFF;echo DUCK_TOGGLE_ON"
-alias duckOFF	"-duck; alias duck duckON;echo DUCK_TOGGLE_OFF"
+alias duckON	"+duck;alias duck duckOFF;echo |_____DUCK_ON______|"
+alias duckOFF	"-duck;alias duck duckON;echo |_____DUCK_OFF_____|"
 bind MOUSE3 duck
 
 //Toggle music volume, mainly to hear tank in pubs
 alias music_v	"musicON"
-alias musicON	"MUSIC_VOLUME_FULL; alias music_v musicOFF"
-alias musicOFF	"MUSIC_VOLUME; alias music_v musicON"
+alias musicON	"MUSIC_VOLUME_FULL;alias music_v musicOFF"
+alias musicOFF	"MUSIC_VOLUME;alias music_v musicON"
 bind HOME music_v
 
 //Toggle master volume because helicopters
 alias soundvol		"soundvolOFF"
-alias soundvolON	"MASTER_VOLUME; alias soundvol soundvolOFF
-alias soundvolOFF	"MASTER_VOLUME_OFF; alias soundvol soundvolON"
+alias soundvolON	"MASTER_VOLUME;alias soundvol soundvolOFF
+alias soundvolOFF	"MASTER_VOLUME_OFF;alias soundvol soundvolON"
 bind PGUP soundvol
 
 //Toggle between +speed and +voicerecord
 alias shiftwalk			"bind RSHIFT +speed"
 alias shiftvoice		"bind RSHIFT +voicerecord"
 alias shiftbind			"shiftbindVOICE"
-alias shiftbindWALK		"shiftwalk;alias shiftbind shiftbindVOICE;echo SHIFT_WALK"
-alias shiftbindVOICE	"shiftvoice;alias shiftbind shiftbindWALK;echo SHIFT_VOICE"
+alias shiftbindWALK		"shiftwalk;alias shiftbind shiftbindVOICE;echo |_____SHIFT_WALK______|"
+alias shiftbindVOICE	"shiftvoice;alias shiftbind shiftbindWALK;echo |_____SHIFT_VOICE_____|"
 bind J "shiftbind;play player/suit_denydevice;"
 
 //Toggle mouse wheel down bind - weapon change or jump
@@ -329,7 +336,7 @@ alias mwheel_jump	"mwj;alias mwheel_bind mwheel_gun"
 alias mwheel_gun	"mwg;alias mwheel_bind mwheel_jump"
 bind N "mwheel_bind;play player/suit_denydevice;"
 
-//SPLIT AUTOEXEC INTO 2 PARTS BECAUSE ITS TOO BIG
+//Split autoexec into 2 parts because its too big//
 exec autoexec2
 
 echo "--------------------------------"
