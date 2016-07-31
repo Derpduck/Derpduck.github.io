@@ -23,7 +23,9 @@ z_vomit_debug 1
 z_tank_rock_debug 1
 melee_show_swing 1
 //z_debug_falling_damage 1
-alias wireframe "incrementvar r_drawothermodels 1 2 1"
+//z_debug_spawnable_areas 1
+alias bluespawns "incrementvar z_debug_spawnable_areas 0 1 1"
+alias wireframe "incrementvar r_drawothermodels 1 2 1" //r_slowpathwireframe 1
 alias viewdist "incrementvar z_view_distance -200 0 200"
 alias gfx_off "z_show_swings 0;z_vomit_debug 0;z_tank_rock_debug 0;melee_show_swing 0;z_debug_falling_damage 0"
 

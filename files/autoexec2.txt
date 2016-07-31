@@ -23,7 +23,7 @@ alias cross_cyan		"cl_crosshair_red 000;cl_crosshair_green 255;cl_crosshair_blue
 alias cross_lawngreen	"cl_crosshair_red 124;cl_crosshair_green 252;cl_crosshair_blue 000"		//Lawn Green
 
 cl_crosshair_alpha 170		//Transparency, 0-255
-cl_colorblind 0				//1=White crosshair, black outline, ignores colour settings
+cl_colorblind 0				//1 = White crosshair, black outline, ignores colour settings
 cl_crosshair_dynamic 0		//Static crosshair
 cl_crosshair_thickness 1	//Values: 1-5, integers only
 crosshair 1					//Draw crosshair
@@ -35,67 +35,71 @@ cross_white					//Set the crosshair colour
 //Standing teammates
 alias glow_survivor_blue	"cl_glow_survivor_r 0;cl_glow_survivor_g 0.6;cl_glow_survivor_b 1"
 alias glow_survivor_pink	"cl_glow_survivor_r 1;cl_glow_survivor_g 0.15;cl_glow_survivor_b 0.3"
-glow_survivor_pink
+alias glow_survivor_pink2	"cl_glow_survivor_r 1;cl_glow_survivor_g 0.1;cl_glow_survivor_b 0.4"
+glow_survivor_pink2
 
 //Incapped
-alias glow_survivor_hurt_yellow "cl_glow_survivor_hurt_r 1;cl_glow_survivor_hurt_g 1;cl_glow_survivor_hurt_b 0"
+alias glow_survivor_hurt_yellow	"cl_glow_survivor_hurt_r 1;cl_glow_survivor_hurt_g 1;cl_glow_survivor_hurt_b 0"
 glow_survivor_hurt_yellow
 
 //Boomed
-alias glow_survivor_vomit_purple "cl_glow_survivor_vomit_r 1;cl_glow_survivor_vomit_g 0;cl_glow_survivor_vomit_b 1"
+alias glow_survivor_vomit_purple	"cl_glow_survivor_vomit_r 1;cl_glow_survivor_vomit_g 0;cl_glow_survivor_vomit_b 1"
 glow_survivor_vomit_purple
 
 //Infected capping a survivor
-alias glow_ability_red "cl_glow_ability_r 1;cl_glow_ability_g 0;cl_glow_ability_b 0"
-glow_ability_red
+alias glow_ability_red		"cl_glow_ability_r 1;cl_glow_ability_g 0;cl_glow_ability_b 0"
+alias glow_ability_green	"cl_glow_ability_r 0;cl_glow_ability_g 1;cl_glow_ability_b 0"
+glow_ability_green
 
 //Close items
 alias glow_item_green "cl_glow_item_r 0;cl_glow_item_g 1;cl_glow_item_b 0"
 glow_item_green
 
 //Far items
-alias glow_item_far_white "cl_glow_item_far_r 1;cl_glow_item_far_g 1;cl_glow_item_far_b 1"
+alias glow_item_far_white	"cl_glow_item_far_r 1;cl_glow_item_far_g 1;cl_glow_item_far_b 1"
+alias glow_item_far_aqua	"cl_glow_item_far_r 0;cl_glow_item_far_g 1;cl_glow_item_far_b 1"
 glow_item_far_white
 
 //Items when black and white / tank hittable glow
 alias glow_thirdstrike_item_pink	"cl_glow_thirdstrike_item_r 1;cl_glow_thirdstrike_item_g 0;cl_glow_thirdstrike_item_b 0.5"
 alias glow_thirdstrike_item_yellow	"cl_glow_thirdstrike_item_r 1;cl_glow_thirdstrike_item_g 1;cl_glow_thirdstrike_item_b 0"
 alias glow_thirdstrike_item_blue	"cl_glow_thirdstrike_item_r 0;cl_glow_thirdstrike_item_g 0.5;cl_glow_thirdstrike_item_b 1"
-glow_thirdstrike_item_pink
+glow_thirdstrike_item_yellow
 
 //Infected side
 //Bleeding out
-cl_glow_survivor_health_include_buffer 0	//No solid health show as incap coloured
+cl_glow_survivor_health_include_buffer 1	//Change glow colour based on only solid health, or temp health + solid health
 cl_glow_survivor_health_bleed_pulse 1		//Pulse glows for temporary health
 cl_glow_survivor_health_bleed_pulse_amount 1
 cl_glow_survivor_health_bleed_pulse_speed 20
 
 //Boomed
-alias glow_infected_vomit_purple "cl_glow_infected_vomit_b 1;cl_glow_infected_vomit_g 0;cl_glow_infected_vomit_r 1"
+alias glow_infected_vomit_purple	"cl_glow_infected_vomit_b 1;cl_glow_infected_vomit_g 0;cl_glow_infected_vomit_r 1"
 glow_infected_vomit_purple
 
 //Spawned team-mates
-alias glow_infected_blue "cl_glow_infected_b 1;cl_glow_infected_g 1;cl_glow_infected_r 0"
+alias glow_infected_blue	"cl_glow_infected_b 1;cl_glow_infected_g 1;cl_glow_infected_r 0"
 glow_infected_blue
 
 //Non-spanwed team-mates
-alias glow_ghost_infected_red "cl_glow_ghost_infected_r 1;cl_glow_ghost_infected_g 0;cl_glow_ghost_infected_b 0"
+alias glow_ghost_infected_red	"cl_glow_ghost_infected_r 1;cl_glow_ghost_infected_g 0;cl_glow_ghost_infected_b 0"
 glow_ghost_infected_red
 
 //High health survivor
-alias glow_survivor_health_high_green "cl_glow_survivor_health_high_r 0;cl_glow_survivor_health_high_g 1;cl_glow_survivor_health_high_b 0"
+alias glow_survivor_health_high_green	"cl_glow_survivor_health_high_r 0;cl_glow_survivor_health_high_g 1;cl_glow_survivor_health_high_b 0"
 glow_survivor_health_high_green
 
 //Medium health survivor
-alias glow_survivor_health_med_yellow "cl_glow_survivor_health_med_r 1;cl_glow_survivor_health_med_g 1;cl_glow_survivor_health_med_b 0"
-glow_survivor_health_med_yellow
+alias glow_survivor_health_med_yellow	"cl_glow_survivor_health_med_r 1;cl_glow_survivor_health_med_g 1;cl_glow_survivor_health_med_b 0"
+alias glow_survivor_health_med_orange	"cl_glow_survivor_health_med_r 1;cl_glow_survivor_health_med_g 0.6;cl_glow_survivor_health_med_b 0"
+glow_survivor_health_med_orange
 
 //Low health survivor
-alias glow_survivor_health_low_white "cl_glow_survivor_health_low_r 1;cl_glow_survivor_health_low_g 1;cl_glow_survivor_health_low_b 1"
+alias glow_survivor_health_low_white	"cl_glow_survivor_health_low_r 1;cl_glow_survivor_health_low_g 1;cl_glow_survivor_health_low_b 1"
 glow_survivor_health_low_white
 
 //Incapped survivor
-alias glow_survivor_health_crit_blue "cl_glow_survivor_health_crit_r 0;cl_glow_survivor_health_crit_g 0.2;cl_glow_survivor_health_crit_b 0.5"
+alias glow_survivor_health_crit_blue	"cl_glow_survivor_health_crit_r 0;cl_glow_survivor_health_crit_g 0.2;cl_glow_survivor_health_crit_b 0.5"
 glow_survivor_health_crit_blue
 
 //Joystick//
@@ -119,23 +123,30 @@ motd_enabled 0
 cl_disablehtmlmotd 1
 motd_intros 1
 
+//Other//
+cl_forcepreload 1		//Loads all of the map at once, no stuttering in-game, slightly increased loading times
+demo_recordcommands 1	//Record commands typed into console in demos
+con_enable 1
+ui_public_lobby_filter_status lobby
+ui_public_lobby_filter_campaign official
+ui_public_lobby_filter_difficulty2 ""
+cl_chat_wipehistory 0
+
 //Quotes//
-alias bhopquote			"say 3ybx: That's not a bhop script, that's a bhop HACK. You are HACKING the game which is ILLEGAL. Get it right."
-alias stoletank			"say Medic! :  somebody hacked into tank i was tank and they just stole it"
-alias duckshit			"say (Infected) [N.B.D] Tom Green :  duck ur shit go die in a hole with your crap infected mum"
-alias greyscreen		"say robertjdoig :  im on grey screen"
-alias competitive		"say Fenrir :  you will win anyway so stop playing so competitivly"
-alias confogl			"say BotPotot: confogl is versus for people that cant play infected"
-alias faceballs			"say pentotalem sodu :  your face look like my balls"
-alias iwillhacknick		"say XxxprogamerxxX :  nick i will hack you hope you like the sound of that!!"
-alias madwater			"say Revolverol :  gotta drink some water, i am kinda mad"
-alias headshotinair		"say (Infected) Javivi :  lol headshot in air"
-alias cucnt				"say Its Billy Bellend! :   so i do you thcik cucnt"
-alias aintrush			"say Its Billy Bellend! :   and that aint rush you thcikc utn"
-alias noderp			"say Its Billy Bellend! :   and fuckin NO ONE says derp any mor"
-alias cuntisbetter		"say YAN :  voice enable is ok but fuck off you cunt is better"
-alias botskeet			"say Coach skeeted Derpduck."
-alias myff				"say [LVP] FF: Derpduck (295 dmg [82%])"
+alias bhopquote		"say 3ybx: That's not a bhop script, that's a bhop HACK. You are HACKING the game which is ILLEGAL. Get it right."
+alias greyscreen	"say robertjdoig :  im on grey screen"
+alias competitive	"say Fenrir :  you will win anyway so stop playing so competitivly"
+alias confogl		"say BotPotot: confogl is versus for people that cant play infected"
+alias faceballs		"say pentotalem sodu :  your face look like my balls"
+alias headshotinair	"say (Infected) Javivi :  lol headshot in air"
+alias cucnt			"say Its Billy Bellend! :   so i do you thcik cucnt"
+alias aintrush		"say Its Billy Bellend! :   and that aint rush you thcikc utn"
+alias noderp		"say Its Billy Bellend! :   and fuckin NO ONE says derp any mor"
+alias cuntisbetter	"say YAN :  voice enable is ok but fuck off you cunt is better"
+alias myff			"say [LVP] FF: Derpduck (295 dmg [82%])"
+alias bodyduck		"say †[[B]]oDyGuArD† : derpduck u go like a duck in real nam xDDDD"
+alias iwasding		"say (Infected) †[[B]]oDyGuArD† :  omg panic i was ding"
+
 
 //Speedrunning Binds//
 //bind E	"callvote ChangeDifficulty Easy"		//Easy
