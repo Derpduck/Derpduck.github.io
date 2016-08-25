@@ -1,5 +1,5 @@
 //DERPDUCK'S L4D2 AUTOEXEC PART 2
-//AS OF 2016/05/16
+//AS OF 2016/08/25
 //CHANGED FREQUENTLY
 //----------------
 //Crosshair//
@@ -146,6 +146,7 @@ alias cuntisbetter	"say YAN :  voice enable is ok but fuck off you cunt is bette
 alias myff			"say [LVP] FF: Derpduck (295 dmg [82%])"
 alias bodyduck		"say †[[B]]oDyGuArD† : derpduck u go like a duck in real nam xDDDD"
 alias iwasding		"say (Infected) †[[B]]oDyGuArD† :  omg panic i was ding"
+alias poochiehell	"say GRmama: all u gotta do is kill tank and poochie will be sent back to hell"
 
 
 //Speedrunning Binds//
@@ -182,6 +183,13 @@ alias iwasding		"say (Infected) †[[B]]oDyGuArD† :  omg panic i was ding"
 //Toggle self on HUD
 //alias zombiehudtoggle "incrementvar hud_zombieteam_showself 0 1 1"
 //bind L "zombiehudtoggle;play ui/buttonrollover;"
+
+//Toggle mouse wheel down bind - weapon change or jump
+//alias mwheel_bind	"mwheel_jump"
+//alias mwheel_jump	"mwj;alias mwheel_bind mwheel_gun;unbind mwheelup"
+//alias mwheel_gun	"mwg;alias mwheel_bind mwheel_jump;bind mwheelup invprev"
+//bind N "mwheel_bind;play player/suit_denydevice;"
+//mwheel_bind
 
 echo ".................................."
 echo ". Autoexec 2 Successfully Loaded ."
