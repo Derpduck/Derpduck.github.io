@@ -1,117 +1,78 @@
-//Derpduck's L4D2 Autoexec
-//AS OF 2016/08/25
-//Changed frequently
-//----------------
+//Derpduck's L4D2 Autoexec - Best viewed in a fixed-width font
+//2016/11/23
 //Launch Options//
-//-lv -novid -nojoy -noaafonts -noborder +mat_motion_blur_percent_of_screen_max 0 -dxlevel 90 -threads 4 -freq 60
+//-lv -novid -nojoy -noaafonts -noborder +mat_motion_blur_percent_of_screen_max 0 -dxlevel 90 -threads 4 -freq 72 -x 0
 
-//Video Settings//
-//Anti-Aliasing:	NONE
-//Filtering:		BILINEAR
-//Vsync:			DISABLED
-//Shader detail:	LOW
-//Effect detail:	MEDIUM
-//Model/Texture:	LOW
-//Multicore Render:	ENABLED
-//Paged Pool Mem:	HIGH
-
-//@ 1000 DPI
-sensitivity 1.7
-
-//Misc. Aliases//
+//Aliases//
 alias rcd			"record DEMORECORDINGFIX;stop"	//Fast demo record/stop to fix graphical bugs
-alias fps_pos		"cl_showfps 4;cl_showpos 1"
-alias fps_pos_off	"cl_showfps 0;cl_showpos 0"
-alias net4			"net_graph 4"
-alias net1			"net_graph 1"
-alias net0			"net_graph 0"
 alias current		"say_team /current"
 alias tank			"say_team /tank"
-alias healthbind	"say_team /health"
 alias thud			"say_team /tankhud"
 alias rup			"say_team /ready"
 alias unrup			"say_team /unready"
 alias spec			"say_team /spectate"
-alias pause_bind	"say_team /pause"
+alias pausebind		"say_team /pause"
 alias shud			"say_team /spechud"
-alias mvp_bind		"say_team /mvp"
-alias bonusfull		"say_team /health full"	//For use in EQ-based configs, shows a compelete breakdown of the bonus (points and % per each section), compatible with ProMod (no extra information given)
+alias bonusfull		"say_team /health full"	//More health bonus info on EQ/Acemod
 alias bonesaw		"say_team /bonesaw 59"	//RUP+Trophy
-alias spawns		"say_team /spawns"
-alias EasyVB		"callvote ChangeDifficulty Easy"
-alias ExpertVB		"callvote ChangeDifficulty Impossible"
-alias AdvancedVB	"callvote ChangeDifficulty Hard"
-alias vbind			"bind E EasyVB;bind R ExpertVB;echo VOTEBINDS ON"
-alias advancedbind	"bind T AdvancedVB;ADVANCED BIND ON"
-alias mwj			"bind mwheeldown +jump"
-alias mwg			"bind mwheeldown invnext"
-alias 0_fov			"cl_viewmodelfovsurvivor 180"	//No FOV
-alias 90_fov		"cl_viewmodelfovsurvivor 90"	//Far FOV
-alias 120_fov		"cl_viewmodelfovsurvivor 120"	//Very far FOV
-alias 51_fov		"cl_viewmodelfovsurvivor 51"	//Default
-alias 189_fov		"cl_viewmodelfovsurvivor 189"	//Upside down, far
-alias 60_fov		"cl_viewmodelfovsurvivor 60"	//Slightly above default
-alias 30_fov		"cl_viewmodelfovsurvivor 30"	//Close
-alias incapfr		"echo 91.121.110.150:27015"		//IP of Panda's server
-alias "+sb"			"+showscores;net_graph 4"		//Show scoreboard and detailed net graph at same time
-alias "-sb"			"-showscores;net_graph 1"		//On release
-alias "+glowuse"	"+use;cl_glow_survivor_health_include_buffer 1"	//Use key + change glow setting
-alias "-glowuse"	"-use;cl_glow_survivor_health_include_buffer 0"	//On release
-alias steamid		"echo STEAM_0:1:39106378"
+alias 51_fov		"cl_viewmodelfovsurvivor 51"
+alias 90_fov		"cl_viewmodelfovsurvivor 90"
+alias 120_fov		"cl_viewmodelfovsurvivor 120"
+alias dot_fov		"cl_viewmodelfovsurvivor 179.5"
+alias 180_fov		"cl_viewmodelfovsurvivor 180"
+alias 189_fov		"cl_viewmodelfovsurvivor 189"
+alias "+sb"			"+showscores;net_graph 4"
+alias "-sb"			"-showscores;net_graph 1"
 
-//Video Resolution//
+//Resolution//
 alias 1080w		"mat_setvideomode 1920 1080 1"
 alias 1080f		"mat_setvideomode 1920 1080 0"
 alias 720w		"mat_setvideomode 1280 720 1"
 alias 720f		"mat_setvideomode 1280 720 0"
 720f
-//1080w
 
-//Monitor Gamma//
+//Gamma//
 alias g161 "mat_monitorgamma 1.6;mat_monitorgamma_tv_enabled 1"	//Max
 alias g160 "mat_monitorgamma 1.6;mat_monitorgamma_tv_enabled 0"
 alias g181 "mat_monitorgamma 1.8;mat_monitorgamma_tv_enabled 1"
 alias g180 "mat_monitorgamma 1.8;mat_monitorgamma_tv_enabled 0"
-alias g201 "mat_monitorgamma 2.0;mat_monitorgamma_tv_enabled 1"
-alias g200 "mat_monitorgamma 2.0;mat_monitorgamma_tv_enabled 0"
 alias g221 "mat_monitorgamma 2.2;mat_monitorgamma_tv_enabled 1"
-alias g220 "mat_monitorgamma 2.2;mat_monitorgamma_tv_enabled 0"	//Minimum (windowed mode brightness)
-g181
+alias g220 "mat_monitorgamma 2.2;mat_monitorgamma_tv_enabled 0"	//Min
+g161
 
-//Interp//
-alias "0_lerp"		"cl_interp 0.0000;cl_interp_ratio -1;echo 0ms INTERP"		//0ms Interp
-alias "5_lerp"		"cl_interp 0.0056;cl_interp_ratio -1;echo 5.6ms INTERP"		//5.6ms Interp (180 tick), should be 5.5555ms
-alias "8_lerp"		"cl_interp 0.0080;cl_interp_ratio -1;echo 8ms INTERP"		//8ms Interp (128 tick), should be 7.8125ms
-alias "10_lerp"		"cl_interp 0.0100;cl_interp_ratio -1;echo 10ms INTERP"		//10ms Interp
-alias "11_lerp"		"cl_interp 0.0110;cl_interp_ratio -1;echo 11ms INTERP"		//11ms Interp
-alias "16_lerp"		"cl_interp 0.0167;cl_interp_ratio -1;echo 16.7ms INTERP"	//16.7ms Interp
-alias "33_lerp"		"cl_interp 0.0333;cl_interp_ratio -1;echo 33.3ms INTERP"	//33.3ms Interp
-alias "66_lerp"		"cl_interp 0.0667;cl_interp_ratio -1;echo 66.7ms INTERP"	//66.7ms Interp (EQ/Acemod Max=67ms)
-alias "100_lerp"	"cl_interp 0.1000;cl_interp_ratio -1;echo 100ms INTERP"		//100ms Interp
-10_lerp
+//Interpolation//
+alias "0_lerp"		"cl_interp 0.0000;cl_interp_ratio -1;echo 0.00ms INTERP"
+alias "7_lerp"		"cl_interp 0.0078;cl_interp_ratio -1;echo 7.80ms INTERP"
+alias "10_lerp"		"cl_interp 0.0100;cl_interp_ratio -1;echo 10.0ms INTERP"
+alias "11_lerp"		"cl_interp 0.0110;cl_interp_ratio -1;echo 11.0ms INTERP"
+alias "16_lerp"		"cl_interp 0.0167;cl_interp_ratio -1;echo 16.7ms INTERP"
+alias "33_lerp"		"cl_interp 0.0333;cl_interp_ratio -1;echo 33.3ms INTERP"
+alias "50_lerp"		"cl_interp 0.0500;cl_interp_ratio -1;echo 50.0ms INTERP"
+alias "66_lerp"		"cl_interp 0.0667;cl_interp_ratio -1;echo 66.7ms INTERP"	//EQ/Acemod Max: 67ms
 
 //Rates//
-alias echo_rates	"rate;cl_cmdrate;cl_updaterate"										//Print current rates
-alias "128_rate"	"rate 100000;cl_cmdrate 128;cl_updaterate 128;echo_rates;11_lerp"	//128 Tick
-alias "100_rate"	"rate 100000;cl_cmdrate 100;cl_updaterate 100;echo_rates;10_lerp"	//100 Tick
-alias "60_rate"		"rate 60000;cl_cmdrate 60;cl_updaterate 60;echo_rates;16_lerp"		//60 Tick
-alias "30_rate"		"rate 30000;cl_cmdrate 30;cl_updaterate 30;echo_rates;33_lerp"		//30 Tick
+alias echo_rates	"rate;cl_cmdrate;cl_updaterate"												//Print current rates
+alias "128_rate"	"rate 100000;	cl_cmdrate 128;	cl_updaterate 128;	echo_rates;10_lerp"		//128 Tick
+alias "100_rate"	"rate 100000;	cl_cmdrate 100;	cl_updaterate 100;	echo_rates;10_lerp"		//100 Tick
+alias "60_rate"		"rate 60000;	cl_cmdrate 60;	cl_updaterate 60;	echo_rates;16_lerp"		//60 Tick
+alias "30_rate"		"rate 30000;	cl_cmdrate 30;	cl_updaterate 30;	echo_rates;33_lerp"		//30 Tick
 128_rate
 
 //Net Graph//
-net_graphproportionalfont 0	//Small font
-net_graphpos 320			//Doesn't cover any huds, values 0-2 are pre-defined positions, anything over is an exactly defined position
-net_graphheight 5			//Height of the graph, and distance between main part and packet loss part, affects size of packet loss display
-net_graphmsecs 10			//Affects size of packet loss display
-net_graphshowlatency 1		//Show packet loss, loss=any red on bottom of net graph
-net_graphshowinterp 1		//Show interpolation, i guess this could be turned off with 0 interp, interp=orange-ish lines on the bottom of net graph
-net_graphtext 1				//Show text fields
-net_graphsolid 1			//Solid interpolation graph
-net_scale 35				//Size of the packet payload/breakdown at the top of net graph, bigger value=smaller display, units bytes per pixel
-net_graph 1					//Turn on basic net graph
+net_graphproportionalfont 0
+net_graphpos 320
+net_graphheight 5
+net_graphmsecs 10
+net_graphshowlatency 1
+net_graphshowinterp 1
+net_graphtext 1
+net_graphsolid 1
+net_scale 100
+net_graph 1
 
 //Mouse//
-m_rawinput 1	//No mouse acceleration/packet loss, but added input lag compared to something like RInput
+sensitivity 1.9	//@ 800 DPI
+m_rawinput 1
 m_filter 0
 m_filter2 0
 m_mouseaccel1 0
@@ -123,95 +84,94 @@ m_customaccel_scale 0
 m_mousespeed 0
 m_forward 1
 m_pitch 0.022
-m_pitch2 0.022
 m_side 0.8
 m_yaw 0.022
 
 //Sound//
 alias MASTER_VOLUME		"volume 0.15;echo |_____VOLUME_ON______|"
-alias MASTER_VOLUME_OFF	"volume 0.03;echo |_____VOLUME_OFF_____|"
+alias MASTER_VOLUME_OFF	"volume 0.05;echo |_____VOLUME_OFF_____|"
 MASTER_VOLUME
-alias MUSIC_VOLUME		"snd_musicvolume 0.00;echo |_____MUSIC_OFF_____|"
-alias MUSIC_VOLUME_FULL	"snd_musicvolume 0.70;echo |_____MUSIC_ON______|"
-MUSIC_VOLUME
+snd_musicvolume 0
 dsp_enhance_stereo 0
 dsp_slow_cpu 0
 dsp_volume 0
-snd_pitchquality 1			//Sound quality in options menu, might affect sound latency, 0=medium, 1=high (?)
-snd_mixahead 0.065			//Reduce sound buffer/delay time, low FPS can result in sound stuttering and latency
-snd_legacy_surround 0
-windows_speaker_config 7	//Speaker setup
+snd_pitchquality 1
+snd_mixahead 0.065
+windows_speaker_config 7
 
 //Captions/Game Messages//
 closecaption 1
-cc_subtitles 0			//Not subtitle only mode
-cc_linger_time 0.7		//Captions are on screen for less time
-cc_predisplay_time 0	//No delay when showing closed captions
-cc_lang english
+cc_subtitles 0
+cc_linger_time 0.7
+cc_predisplay_time 0
 cl_showhelp 0
 cl_autohelp 0
 gameinstructor_enable 0
+motd_enabled 0
+motd_intros 1
 
 //Spectating//
 spec_allowroaming 1
-cl_ideal_spec_mode 6	//Free-look
+cl_ideal_spec_mode 6
 
 //Networking//
-mm_dedicated_search_maxping 75
+mm_dedicated_search_maxping 80
 cl_timeout 25
-cl_resend 2
+cl_resend 1
 cl_downloadfilter "nosounds"
-cl_allowdownload 1
-cl_allowupload 1
 net_splitpacket_maxrate 30000
 net_splitrate 2
 net_maxroutable 1280
 
-//Graphical//
-mat_queue_mode 2				//Multicore rendering, 0=disabled, 2=enabled, -1=auto. Adds input lag, but gives higher and more stable FPS
-mat_grain_scale_override 0		//No film grain
-mat_bloom_scalefactor_scalar 0	//Bloom, default=0.5
-r_dynamic 0						//Dynamic shadows, doesn't seem to do anything in L4D2
+//Graphics//
+mat_queue_mode 2	//Multicore rendering
+mat_grain_scale_override 0
+r_dynamic 0
 r_eyemove 0
 r_eyesize 0
 r_eyeshift_z 0
 r_eyeshift_y 0
 r_eyeshift_x 0
-r_PhysPropStaticLighting 0
 cl_ragdoll_limit 0
-cl_perf_wizard_enable 0			//"Enables a performance-tuning wizard"
-cl_detail_max_sway 0
-cl_detail_avoid_recover_speed 0
-cl_detail_avoid_force 0
-func_break_max_pieces 3
-budget_show_history 0
-muzzleflash_light 0				//Doesn't seem to do anything
 
-//Visual//
+//Other//
 cam_ideallag 0
-c_thirdpersonshoulder 0			//Disble thirdperson
+c_thirdpersonshoulder 0
 c_thirdpersonshoulderoffset 0
 c_thirdpersonshoulderheight 0
 cl_playerspraydisable 0
+joystick 0	//Disable joystick, otherwise speed climbing does not work
+joy_advanced 0
+sc_enable 0
+sc_enable2 0
+voice_enable 1
+voice_forcemicrecord 1
+voice_modenable 1
+voice_scale 0.75
+voice_loopback 0
+cl_forcepreload 1
+con_enable 1
+ui_public_lobby_filter_status lobby
+ui_public_lobby_filter_campaign official
+ui_public_lobby_filter_difficulty2 ""
 
 //Key Binds//
-unbindall //Remove old binds
+unbindall
 
-//Null-cancelling movement script, left handed version//
+//Null-cancel//
 bind UPARROW +mfwd
 bind DOWNARROW +mback
 bind LEFTARROW +mleft
 bind RIGHTARROW +mright
-
-//Xbye's DSP sound removal included, more accurate directional sound: http://steamcommunity.com/sharedfiles/filedetails/?id=487027371
-alias +mfwd		"dsp_volume 0;-back;+forward;alias checkfwd +forward"
-alias +mback	"dsp_volume 0;-forward;+back;alias checkback +back"
-alias +mleft	"dsp_volume 0;-moveright;+moveleft;alias checkleft +moveleft"
-alias +mright	"dsp_volume 0;-moveleft;+moveright;alias checkright +moveright"
-alias -mfwd		"-forward;checkback;alias checkfwd none"
-alias -mback	"-back;checkfwd;alias checkback none"
-alias -mleft	"-moveleft;checkright;alias checkleft none"
-alias -mright	"-moveright;checkleft;alias checkright none"
+//DSP removed, for better directional sound: http://steamcommunity.com/sharedfiles/filedetails/?id=487027371
+alias +mfwd		"dsp_volume 0;-back;		+forward;	alias checkfwd +forward"
+alias +mback	"dsp_volume 0;-forward;		+back;		alias checkback +back"
+alias +mleft	"dsp_volume 0;-moveright;	+moveleft;	alias checkleft +moveleft"
+alias +mright	"dsp_volume 0;-moveleft;	+moveright;	alias checkright +moveright"
+alias -mfwd		"dsp_volume 0;-forward;		checkback;	alias checkfwd none"
+alias -mback	"dsp_volume 0;-back;		checkfwd;	alias checkback none"
+alias -mleft	"dsp_volume 0;-moveleft;	checkright;	alias checkleft none"
+alias -mright	"dsp_volume 0;-moveright;	checkleft;	alias checkright none"
 alias checkfwd	"none"
 alias checkback	"none"
 alias checkleft	"none"
@@ -219,103 +179,90 @@ alias checkright "none"
 alias none ""
 
 //Main binds
-bind MOUSE1 "+attack"
-bind MOUSE2 +attack2
-bind RCTRL +jump
-bind ENTER +use
-bind / +reload
-bind RSHIFT +speed
-bind KP_END +duck
-bind PGDN +zoom
-bind MWHEELDOWN +jump
-bind DEL "slot1;cross_white"		//Primary weapon
-bind END "slot2;cross_cyan"		//Secondary weapon
-bind SPACE "slot4;slot5"		//Pills/Medkit
-bind TAB +showscores
-bind SHIFT +sb
-bind INS "impulse 100"	//Flashlight
-bind F "impulse 201"	//Spray
-bind ] "say_team GO GO GO"
-bind [ "say_team BACK BACK BACK"
-//bind KP_END +zoom
-//bind KP_INS +duck
-//bind MWHEELUP invprev
-
+bind MOUSE1		+attack
+bind MOUSE2		+attack2
+bind RCTRL		+jump
+bind MWHEELDOWN	+jump
+bind ENTER		+use
+bind /			+reload
+bind RSHIFT		+speed
+bind PGDN		+zoom
+bind DEL		"slot1;cross_white;	RESET_FOV"		//Primary weapon
+bind END		"slot2;cross_cyan;	ALT_FOV"		//Secondary weapon
+bind SPACE		"slot4;slot5;cross_white;ALT_FOV"	//Medkit -> Pills (Priority)
+bind TAB		+showscores
+bind SHIFT		+sb
+bind INS		"impulse 100"	//Flashlight
+bind F			"impulse 201"	//Spray
+bind ]			"say_team [GO GO GO]"
+bind [			"say_team [BACK BACK BACK]"
+bind =			"say_team [HIDE]"
 //Other binds
-bind ` toggleconsole
-bind 0 slot10
-bind 1 slot1
-bind 2 slot2
-bind 3 slot3
-bind 4 slot4
-bind 5 slot5
-bind 6 slot6
-bind 7 slot7
-bind 8 slot8
-bind 9 slot9
-bind H motd					//Has issues when bound to any other key?
-bind A "+mouse_menu Orders"	//Commands radial menu
-bind S "+mouse_menu QA"		//Laughing radial menu
-bind Y messagemode			//Global chat
-bind U messagemode2			//Team chat
-bind F1 "Vote Yes"
-bind F2 "Vote No"
-bind F5 chooseteam
-bind F6 jpeg
-bind F12 "status;disconnect"	//Print server IP before disconnecting
-bind ESCAPE cancelselect
-
+bind `			toggleconsole
+bind 0			slot10
+bind 1			slot1
+bind 2			slot2
+bind 3			slot3
+bind 4			slot4
+bind 5			slot5
+bind 6			slot6
+bind 7			slot7
+bind 8			slot8
+bind 9			slot9
+bind H			motd
+bind A			"+mouse_menu Orders"	//Commands radial menu
+bind S			"+mouse_menu QA"		//Laughing radial menu
+bind Y			messagemode				//Global chat
+bind U			messagemode2			//Team chat
+bind F1			"Vote Yes"
+bind F2			"Vote No"
+bind F5			chooseteam
+bind F6			jpeg
+bind F12		"status;disconnect"
+bind ESCAPE		cancelselect
+bind HOME		"incrementvar snd_musicvolume 0 0.8 0.8"
+bind BACKSPACE	+voicerecord
+bind RSHIFT		+speed
+bind Q			"unbind RSHIFT"
 //Confogl//
-bind F3 "rup;sm_spawns"
-bind F4 unrup
-bind F9 pause_bind
-bind Z tank
-bind X current
-bind C bonusfull
-//bind V spawns
-bind KP_5 spec
+bind F3			"rup;sm_spawns"
+bind F4			unrup
+bind F9			pausebind
+bind Z			tank
+bind X			current
+bind C			bonusfull
+bind KP_5		spec
 
-//View-model FOV//
+//Viewmodel FOV
+alias	ALT_FOV 	90_fov
+alias	RESET_FOV	90_fov
+//FOV Cycler
+alias	FOV_TOGGLE	FOV120
+alias	FOV180		"180_fov;	cl_crosshair_alpha 170;alias FOV_TOGGLE FOV90;	alias ALT_FOV 90_fov;	alias RESET_FOV 180_fov"
+alias	FOV90		"90_fov;	cl_crosshair_alpha 170;alias FOV_TOGGLE FOV120;	alias ALT_FOV 90_fov;	alias RESET_FOV 90_fov"
+alias	FOV120		"120_fov;	cl_crosshair_alpha 170;alias FOV_TOGGLE FOV180;	alias ALT_FOV 120_fov;	alias RESET_FOV 120_fov"
+alias	dotfov		"dot_fov;	cl_crosshair_alpha 0;RESET_FOV dot_fov;ALT_FOV 120_fov"
+bind	.			FOV_TOGGLE
+bind	,			FOV_TOGGLE
+bind	M			dotfov
 90_fov
 
-//Cycle FOV
-alias FOV_TOGGLE FOV120
-alias FOV0		"0_fov;alias fov_toggle FOV90"
-alias FOV90		"90_fov;alias fov_toggle FOV120"
-alias FOV120	"120_fov;alias fov_toggle FOV0"
-bind . FOV_TOGGLE
-bind , FOV_TOGGLE
-
-//Toggle Functions//
 //Toggle crouch
-alias duck		"duckON"
-alias duckON	"+duck;alias duck duckOFF;echo |_____DUCK_ON______|"
-alias duckOFF	"-duck;alias duck duckON;echo |_____DUCK_OFF_____|"
-bind MOUSE3 duck
-
-//Toggle music volume
-alias music_v	"musicON"
-alias musicON	"MUSIC_VOLUME_FULL;alias music_v musicOFF"
-alias musicOFF	"MUSIC_VOLUME;alias music_v musicON"
-bind HOME music_v
+alias	duck		"duckON"
+alias	duckON		"+duck;alias duck duckOFF;	echo |_____DUCK_ON______|"
+alias	duckOFF		"-duck;alias duck duckON;	echo |_____DUCK_OFF_____|"
+bind	MOUSE3		duck
+bind	KP_INS		duck
 
 //Toggle master volume
-alias soundvol		"soundvolOFF"
-alias soundvolON	"MASTER_VOLUME;alias soundvol soundvolOFF
-alias soundvolOFF	"MASTER_VOLUME_OFF;alias soundvol soundvolON"
-bind PGUP soundvol
+alias	soundvol	"soundvolOFF"
+alias	soundvolON	"MASTER_VOLUME;		alias soundvol soundvolOFF
+alias	soundvolOFF	"MASTER_VOLUME_OFF;	alias soundvol soundvolON"
+bind	PGUP		soundvol
 
-//Toggle RSHIFT between +speed and +voicerecord
-alias shiftwalk			"bind RSHIFT +speed"
-alias shiftvoice		"bind RSHIFT +voicerecord"
-alias shiftbind			"shiftbindVOICE"
-alias shiftbindWALK		"shiftwalk;alias shiftbind shiftbindVOICE;echo |_____WALK______|"
-alias shiftbindVOICE	"shiftvoice;alias shiftbind shiftbindWALK;echo |_____VOICE_____|"
-bind J "shiftbind;play player/suit_denydevice;"
-
-//Split autoexec into 2 parts because it's too big//
-exec autoexec2
-
+exec autoexec2 //Part 2
+//exec _l4d1
+echo ""
 echo "--------------------------------"
 echo "| Derpduck's L4D2 autoexec.cfg |"
 echo "--------------------------------"
