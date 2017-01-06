@@ -1,24 +1,2 @@
---Should I speedrun this game?
-    No.
-
---Why do you speedrun this game?
-    I don't know.
-
---What version do you speedrun on?
-    This mostly depends on what maps / categories I'm running.
-    For any of the original 5 campaigns I will be running on 2.0.0.8.
-    Co-op runs will probably be on 2.0.0.8 or newest.
-    Any other runs should be on the current steam version.
-
---Why do you sometimes reset twice in a row?
-    When loading a level for the first time the bots will be able to move instantly, the next time the level is loaded the bots will stay in place for a while, making them easier to kill.
-
---Why do you play on easy difficulty?
-    It's faster, this is a speedrun. The run does not have to be done at a fixed difficulty, so it is changed when needed (killing bots, dying faster in co-op).
-
---Why do you kill the bots?
-    Bots are slow. I would have to wait for them to get to the saferoom to finish the level.
-    Yes, I know you can kick the bots via console, but I do not do this as part of a normal run for reasons.
-
---Why aren't you doing this thing?
-    Either it doesn't save any time, or I don't know it. If you think something will save time, feel free to say it.
+Q: Should I speedrun L4D2?
+A: No.
