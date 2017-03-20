@@ -1,2 +1,2 @@
 Version
-216!Version 2.1.6 has been released!#Changes:#:^)
+217!Version 2.1.7 has been released!#Changes:#Fixed DSM chat crashes#Option to use old medic targeting code#Fixed error when not using DSM chat#Fixed issue with intel arrows for specatators#Damage indicator colors option#And more!
