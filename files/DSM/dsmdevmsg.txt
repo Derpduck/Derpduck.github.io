@@ -1,2 +1,2 @@
 Version
-222!Version 2.2.2 has been released!#Changes:#Updated to 2.9.2 - big thanks to Orpheon for this
+223!Version 2.2.3 has been released!#Changes:#Fixed an issue with RCON login#Implemented the E-Sports mod binds system, allowing non-character keys to be bound
